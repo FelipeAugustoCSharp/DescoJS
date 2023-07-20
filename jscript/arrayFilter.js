@@ -32,9 +32,16 @@ var funcionarios = [
 ];
 
 //var funcionariosHomens = funcionarios.filter(x => console.log(x.sexo))
-var funcionariosHomens1 = funcionarios.filter(
+/*var funcionariosHomens1 = funcionarios.filter(
     function (valor) {
         console.log(valor.nome)
     }
-)
+)*/
 //console.log();
+
+let arr = [3,4,5,6,7]
+
+let modificarMap = arr.map(function (elemento) {
+    return elemento+elemento;
+});
+console.log(modificarMap)
