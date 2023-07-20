@@ -38,10 +38,3 @@ var funcionarios = [
     }
 )*/
 //console.log();
-
-let arr = [3,4,5,6,7]
-
-let modificarMap = arr.map(function (elemento) {
-    return elemento+elemento;
-});
-console.log(modificarMap)
