@@ -8,7 +8,7 @@ var arr = [10,20,30,40,50,60]
     console.log(array[indice])
 })*/
 
-var carro = [{modelo: 'Audi A3', marca: 'Audi', ano: 2020},
+/*var carro = [{modelo: 'Audi A3', marca: 'Audi', ano: 2020},
              {modelo: 'Jetta', marca: 'BMW', ano: 2010}
             ]
 for (let index in carro) {
@@ -18,4 +18,20 @@ for (let index in carro) {
 
 for (let veiculo of carro) {
     console.log(veiculo.marca)
-}
+}*/
+
+const carro = {
+
+    modelo: 'Audi A3',
+  
+    marca: 'Audi',
+  
+    ano: 2020
+  
+  };
+  
+  for (let caracteristica in carro) {
+  
+    console.log(caracteristica + ': ' + carro[caracteristica]);
+  
+  }
