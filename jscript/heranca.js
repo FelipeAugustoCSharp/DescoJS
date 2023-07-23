@@ -18,7 +18,7 @@ class SmartPhone extends DispositivoEletronico{
         this.cor = cor;
         this.modelo = modelo;
     }
-}
+}//por mim tudo bem. volto daqui 10minutos entao(15:10)
 
 var s1 = new SmartPhone("Samsung","Preto","A71");
 console.log(s1)
