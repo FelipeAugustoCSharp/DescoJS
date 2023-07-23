@@ -15,4 +15,4 @@ console.log(soma(10,5))
 const numeros = [1,2,3,4,5];
 const valores = numeros.map((num) => num*num);
 console.log(valores)
-//>:C rodou?
+console.log("passou 1")
