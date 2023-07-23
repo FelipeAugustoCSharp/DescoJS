@@ -1,11 +1,12 @@
+var url = "https://g1.globo.com/globonews/cidades-e-solucoes/"
 
-var nome = "Ayla Silva";
-var contagem = 0;
-for (let i = 0; i < nome.length; i++) {
-    if(nome[i] == "l"){
-        contagem++;
-        console.log(`a letra '${nome[i]}' apareceu ${Number(contagem)} vezes,\n e a posição dela é ${nome.indexOf(nome[i])}`)
-    }
-}
+//for foroff
+//substring
+//toUpperCase 
 
-//passamos mais tento tentando configurar a IDE do que estudando 
+//foreach
+//
+
+//se vc escrever forin e apertar tab, ele cria um construtor 
+//Tipo, no começo eu tinha até uma agendinha pra anotar 
+
