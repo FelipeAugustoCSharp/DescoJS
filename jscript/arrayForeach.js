@@ -20,18 +20,17 @@ for (let veiculo of carro) {
     console.log(veiculo.marca)
 }*/
 
-const carro = {
-
-    modelo: 'Audi A3',
-  
-    marca: 'Audi',
-  
-    ano: 2020
-  
-  };
+const carros = [{modelo: 'Audi A3', marca: 'Audi',ano: 2020},
+                {modelo: 'Honda Hyundai', marca: 'Honda', ano: 1920},
+               ];
+    
   
   for (let caracteristica in carro) {
   
-    console.log(caracteristica + ': ' + carro[caracteristica]);
+    //console.log(caracteristica + ': ' + carro[caracteristica]);
   
   }
+  for (var carro in carros) {
+    console.log(carro)//METODOSFOR.JS
+  }
+  //AAAAAAAAAAAAAAA QUE ODIO DO MOUSE CALMA 1SEG
