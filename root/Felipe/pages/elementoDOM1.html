@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>IMPORTANTE</title>
+</head>
+<body>
+    <ul id="lista">
+
+    </ul>
+</body>
+<script>
+    var elemento = document.createElement("div");
+    elemento.innerText = "Inclusao Social é Importante";
+    elemento.style.backgroundColor = "lightgreen";//ISSO É MUITO IMPORTANTE APPEND == ADICIONE
+    document.body.append(elemento);//ADICIONAR COMO PAI 
+
+    var lista = document.getElementById("lista");
+    var li = document.createElement("li");
+    li.textContent = "Quem somos";
+    lista.appendChild(li);//ADICIONAR FILHA
+
+</script>
+</html>

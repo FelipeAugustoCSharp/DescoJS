@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <ul class="listaTime">
+
+    </ul>
+</body>
+<script>
+
+    times = ["vasco", "palmeiras", "corinthians", "atlético"];
+    var listaDeTimes = document.querySelector("ul.listaTime");
+
+    for (let i = 0; i < times.length; i++) {
+
+        var listItem  = document.createElement('li');
+        listItem.innerText = times[i];
+        listItem.style.border = "1px solid blue"
+        listaDeTimes.appendChild(listItem)
+    }
+</script>
+</html>

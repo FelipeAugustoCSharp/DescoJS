@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!--fundo azul, letra branca e maíuscula-->
+    <div class="estilo">
+        div com estilo
+    </div>
+    <div class="estilo">
+        div com estilo 2
+    </div>
+    <p class="estilo">Elemento paragrafo estilisado</p>
+    <p>Isso é <span class="estilo"> elemento span</span> dentro de um p</p>
+</body>
+<script>
+    var Estilo = document.getElementsByClassName("estilo");
+    for (let i = 0; i < Estilo.length; i++) {
+        Estilo[i].style.color = "white"
+        Estilo[i].style.background = "darkblue"
+        Estilo[i].value;
+        Estilo[i].innerText = Estilo[i].innerText.toUpperCase();
+    }
+</script>
+</html>

@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Elemento DOM 6</title>
+</head>
+<body>
+    <form action="">
+        <input type="text" placeholder="insert your name" id="inputer">
+        <input type="button" onclick="exemploEvento()">
+    </form>
+    <p>your name is:</p>
+    <p id="namer">.....</p>
+</body>
+<script>
+    var nome = document.getElementById("namer");
+    function onMouse() {
+        
+    }
+    function exemploEvento(){
+        var iptText = document.getElementById("inputer").value;
+        nome.innerText = iptText;
+    }
+    
+</script>
+</html>
