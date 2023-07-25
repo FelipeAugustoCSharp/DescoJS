@@ -7,3 +7,7 @@
 # npm install readline-sync
 
 # npm install readline-sync --save
+
+# em Js
+
+# event.preventDefault() evita a página ser recarregada
