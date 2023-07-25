@@ -6,22 +6,25 @@
     <title>Elemento DOM 6</title>
 </head>
 <body>
-    <form action="">
-        <input type="text" placeholder="insert your name" id="inputer">
-        <input type="button" onclick="exemploEvento()">
-    </form>
-    <p>your name is:</p>
-    <p id="namer">.....</p>
-</body>
-<script>
-    var nome = document.getElementById("namer");
-    function onMouse() {
+    <form name="formCadastro" onsubmit="validarForm()">
+        <label">Email</label>
+        <input type="email" placeholder="insira seu email" id="email" >
+        <label">Senha</label>
+        <input type="password" placeholder="insert your password" id="senha">
         
+        <button type="submit">Entrar</button>
+    </form>
+</body>
+<script>    
+    function validarForm() {
+        var emailPessoa = document.forms["formCadastro"]["email"].value;
+        if(emailPessoa == ""){
+            alert("Digite o seu nome!");
+            event.preventDefault();
+        }else{
+            alert("Olá "+emailPessoa.split("@")[0])
+            event.preventDefault();
+        }
     }
-    function exemploEvento(){
-        var iptText = document.getElementById("inputer").value;
-        nome.innerText = iptText;
-    }
-    
 </script>
 </html>
