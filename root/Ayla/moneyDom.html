@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Estudo Ayla</title>
+</head>
+<body>
+    <h1>Descubra o signo da sua ALMA GÊMEA</h1>
+    <button class="bDescobrir">Descobrir</button>
+    <div class="figura"></div>
+</body>
+<script>
+   let bDescobrir = document.querySelector(".bDescobrir").addEventListener("click", (event) =>{ 
+        let confirmacao = confirm("Deseja descobrir?");
+        confirmacao ? alert("Sua alma gemea e de Aries") : alert("Talvez outra Hora");
+   });
+</script>
+</html>
