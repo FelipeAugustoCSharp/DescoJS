@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form name="formCadastro" onsubmit="pegarArgumentos()">
+        <select id="cargo">
+            <option class="tipoFuncao" value="Funcionario">Funcionario</option>
+            <option class="tipoFuncao" value="Gerente">Gerente</option>
+            <option class="tipoFuncao" value="Desenvolvedor">Desenvolvedor</option>
+        </select>
+        <input type="text" id="nome" placeholder="Insira seu nome">
+        <input type="number" id="idade" placeholder="Insira sua idade">
+        <input type="text" id="departamento" placeholder="Insira seu departamento">
+    
+        <button type="submit">Entrar</button>
+    </form>
+    <p id="Imprimir"></p>
+</body>
+<script>
+    function pegarArgumentos() {
+        var cargo = document.forms["formCadastro"]["cargo"]["tipoFuncao"][0].value;
+        var imprime = document.getElementById("Imprimir");
+        imprime.innerText = cargo;
+        event.preventDefault();
+    }
+</script>
+</html>
