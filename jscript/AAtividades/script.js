@@ -33,8 +33,25 @@ class desenvolvedor extends funcionario{
         console.log(`Eu ${this.nome} estou Programando`)
     }
 }
+
+function pegarArgumentos() {
+    this.nome = document.forms["formCadastro"]["nome"].value;
+    this.idade = document.forms["formCadastro"]["idade"].value;
+    this.cargo  = document.forms["formCadastro"]["cargo"].value;
+    this.departamento = document.forms["formCadastro"]["departamento"].value;
+    
+    if(this.cargo === 'Gerente'){
+        novoGerente = new gerente(nome,idade,cargo,departamento);
+        document.getElementById("Imprimir").innerText = this.cargo;
+    }else if(this.cargo === 'Desenvolvedor'){
+        novoDev = new desenvolvedor(nome,idade,cargo,departamento);
+        document.getElementById("Imprimir").innerText = "essa pessoa é um(a): "+ this.cargo;
+    }
+    //document.getElementById("Imprimir").innerText = nome;
+    event.preventDefault();
+}
 //puxar resultados através do HTML
 //Usar excessoes para os tipos de dos incorretos
 //campo: nome, idade, cargo, departamento e lang de programação
-var novoGerente = new gerente("Rogerio", "32", "Gerente", "Administração");
+
 var novoDev = new desenvolvedor("Marcia", "27", "Desenvolvedora", "TI");
