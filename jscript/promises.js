@@ -1,6 +1,8 @@
 /*quando recebe dados externos(API)
 ele é tratado pelo promise
 */
+
+//Promise é um método& Objeto asyncrono
 const minhaPromise = new Promise((resolve, reject) => {
     const sucesso = true;
     if (sucesso) {
