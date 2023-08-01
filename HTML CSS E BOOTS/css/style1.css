@@ -1,0 +1,23 @@
+table{
+    width: 100%;
+}
+table td{
+    color: #303030;
+    padding: 5px;
+}
+/*EVEN == PAR*/
+table tr:nth-child(even){
+    background-color: darkcyan;
+}
+/*ODD == IMPAR*/
+table tr:nth-child(odd){
+    background-color: #dbdbdbdb;
+    
+}
+table thead th{
+    background-color: #daabda;
+   
+}
+.navegador>.ordem{
+    float: right;
+}

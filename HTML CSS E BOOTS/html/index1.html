@@ -3,18 +3,19 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/HTML CSS E BOOTS/css/style1.css">
     <title>Tutle</title>
 </head>
 <body>
-    <nav><!--navegação-->
-        <dl>
-            <dt>Coffee</dt>
-            <dd>-Black hot drink</dd>
 
-            <dt>Water</dt>
-            <dd>-Cold And Healt</dd>
-        </dl>
+    <nav class="navegador">
+        <ul class="ordem">
+            <li>texto1</li>
+            <li>texto2</li>
+            <li>texto3</li>
+        </ul>
     </nav>
+
     <video width="320" height="200" autoplay style="background-color: lightskyblue;">
         <source src="/HTML CSS E BOOTS/contents/bothSides.mp4" type="video/mp4">
         <source src="https://www.youtube.com/watch?v=Ec3utUm-X-w" type="video/webm">
@@ -28,19 +29,26 @@
         <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Est modi et vitae dolorem culpa, totam libero. Necessitatibus ipsam ratione explicabo quis reiciendis aliquam, ut neque ducimus eveniet, facilis, molestiae vero.</p>
     </article>
 
-    <table border>
-        <tr>
-            <th>Servicos</th><th>Valor</th><!--TH deixa em negrito-->
-        </tr>
-        <tr><!--TR = table row//coluna na tabela-->
-            <td>Reserva de hotel</td><td>R$150,00</td><!--TD deixa normal-->
-        </tr>
-        <tr>
-            <td>Compra de passagens</td><td>R$100,00</td>
-        </tr>
-        <tr>
-            <td>Aluguel de carros</td><td>R$50,00</td>
-        </tr>
+    <table>
+        <caption>Descricao dos servicos e respectivos valores</caption>
+        <thead>
+            <th>Servicos</th>
+            <th>Valor</th><!--TH deixa em negrito-->
+        </thead>
+        <tbody><!--TR = table row//coluna na tabela-->
+            <tr>
+                <td>Reserva de hotel</td>
+                <td>R$150,00</td><!--TD deixa normal-->
+            </tr>
+            <tr>
+                <td>Compra de passagens</td>
+                <td>R$100,00</td>
+            </tr>
+            <tr>
+                <td>Aluguel de carros</td>
+                <td>R$50,00</td>
+            </tr>
+        </tbody>
     </table>
 <br></br>
     
