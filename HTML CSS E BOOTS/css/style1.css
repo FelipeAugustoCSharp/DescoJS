@@ -1,23 +1,99 @@
-table{
-    width: 100%;
+*{
+    padding: 0;
+    margin: 0;
 }
-table td{
-    color: #303030;
-    padding: 5px;
+body{
+    background-color: lightcyan;
 }
-/*EVEN == PAR*/
-table tr:nth-child(even){
-    background-color: darkcyan;
+#navegacao{
+    z-index: 999;
+    width: 5%;
+    height: 100vh;
+    background-color: darkslateblue;
+    position: absolute;
 }
-/*ODD == IMPAR*/
-table tr:nth-child(odd){
-    background-color: #dbdbdbdb;
-    
+#navegacao ul{
+    position: absolute;
+    top: 0px;
+    left: -30px;
+    list-style: none;
 }
-table thead th{
-    background-color: #daabda;
-   
+
+
+@keyframes navHover {
+    from{
+        width: 5%;
+    }
+    to{
+        width: 15%;
+    }
 }
-.navegador>.ordem{
-    float: right;
+#navegacao:hover,#navegacao ul:hover{
+    animation:navHover 1s ease-out forwards ;
+}
+
+#sessao{
+    margin-left: 5%;
+    background-color: lightslategrey;
+    height: 80vh;
+    display: flex;
+    padding-top: 5%;
+}
+.pic-ctn {
+    width: 50%;
+    height: 50%;
+  }
+  .pic-ctn > img {
+    z-index: 0;
+    width: 80%;
+    height: 100%;
+    position: absolute;
+    top: -75px;
+    left: calc(30% - 100px);
+    opacity: 0;
+    animation: display 6s infinite;
+  }
+  @keyframes display {
+    0% {
+      transform: translateX(200px);
+      opacity: 0;
+    }
+    10% {
+      transform: translateX(0);
+      opacity: 1;
+    }
+    20% {
+      transform: translateX(0);
+      opacity: 1;
+    }
+    30% {
+      transform: translateX(-200px);
+      opacity: 0;
+    }
+
+  }
+  
+  .pic-ctn {
+    position: relative;
+    margin-top: 15vh;
+  }
+  
+  img:nth-child(2) {
+    animation-delay: 2s;
+  }
+  img:nth-child(3) {
+    animation-delay: 4s;
+  }
+  img:nth-child(4) {
+    animation-delay: 6s;
+  }
+#sessao div{
+    width: 50%;
+    height: 50%;
+    background-color: green;
+}
+
+footer{
+    height: 2vh;
+    text-align: center;
 }
