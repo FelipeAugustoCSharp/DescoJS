@@ -8,7 +8,7 @@ body{
 #navegacao{
     z-index: 999;
     width: 5%;
-    height: 100vh;
+    height:125vh;
     background-color: darkslateblue;
     position: absolute;
 }

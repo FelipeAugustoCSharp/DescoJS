@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reservas</title>
+</head>
+<header>
+    <h1>Página para fazer sua reserva</h1>
+</header>
+<body>
+    <section>
+       <h2>Preencha os dados solicitados abaixo</h2>
+       <hr>
+        <form method="GET" action="">
+            <fieldset>  
+                <label>Nome completo</label><br>
+                <input type="tex" required name="nome"><br>
+
+                <label>Data de ida</label><br>
+                <input type="date" name="dataida" /><br>
+    
+                <label>Data de volta</label><br>
+                <input type="date" name="datavolta"><br>
+
+                <label>E-mail</label><br>
+                <input type="email" required name="email"><br>
+            </fieldset>
+           <fieldset>
+            <legend>Selecione o serviço que deseja</legend>
+                <label>
+                    <input type="checkbox" name="compradepassagem" value="CompradePassagem"> Compra de passagem
+                </label><br>
+                <label>
+                    <input type="checkbox" name="reservahosp" value="reservahospedagem"> Reserva de Hospedagem
+                </label><br>
+                <label>
+                    <input type="checkbox" name="aluguelveiculo" value="aluguelveiculo"> Aluguel de veículos
+                </label><br>
+           </fieldset> 
+           <fieldset>
+                <legend>Selecione a forma de pagamento</legend>
+                        <label>
+                            <input type="radio" name="fpgt" value="Boleto"> Boleto Bancário
+                        </label><br>
+                        <label>
+                            <input type="radio" name="fpgt" value="CartaoCredito"> Cartão de crédito
+                        </label><br>
+                        <label>
+                            <input type="radio" name="fpgt" value="PIX"> PIX
+                        </label>
+           </fieldset>
+           <fieldset>
+                <legend>Escolha o prazo para pagamento</legend>
+                <select name="przpgt">
+                    <option value="avista">À vista</option>
+                    <option value="5vzs" selected>Até 5x sem Juros</option>
+                    <option value="12vzs">Até 12x com juros</option>
+                </select>
+                
+           </fieldset>
+           <label>Caso tenha alguma observação preencha abaixo:</label><br><br>
+           <textarea rows="10" name="obs"></textarea><br><br>
+
+            <button type="submit">Finalizar</button>
+        
+        </form>
+        
+    </section>
+    
+</body>
+</html>
