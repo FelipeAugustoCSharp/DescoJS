@@ -4,12 +4,109 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!--<link rel="stylesheet" href="/styles/styleMain.css">-->
-    <script src="./padraoJSONPromise.js"></script>
+    <!--<script src="./padraoJSONPromise.js"></script>-->
     <title>DescoJs JSON</title>
 </head>
 <body>
-    <div id="lista-container">
+    <form action="">
+        <fieldset>
+            <select id="selecao">
+                <option value="Desenvolvedor">Desenvolvedor</option>
+                <option value="Gerente">Gerente</option>
+            </select>
+            <label for="">nome</label>
+            <input type="text" name="nome" id="nome">
+            <label for="">idade</label>
+            <input type="number" name="idade" id="idade">
 
-    </div>
+            <label for="">depart</label>
+            <input type="text" name="departamento" id="dep">
+            <label for="">lang</label>
+            <input type="text" name="linguagem" id="lang">
+            <button type="submit" onclick="obterDados()" id="botao">finalizar</button>
+        </fieldset>
+    </form>
+    
+
+    <script>
+        class funcionario{
+    constructor(nome, idade, cargo){
+        this.nome = nome;
+        this.idade = idade;
+        this.cargo = cargo;
+    }
+
+    seApresentar(){
+        console.log(`Ola meu nome é ${this.nome} e eu vou trabalhar aqui como ${this.cargo}`)
+    }
+
+    trabalhar(){
+        console.log(`Estou ${this.nome} trabalhando `)
+    }
+}
+
+class gerente extends funcionario{
+    constructor(nome, idade, cargo, departamento){
+        super(nome, idade, cargo);
+        this.departamento = departamento;
+    }
+    gerenciar(){
+        console.log(`Eu ${this.nome} estou Gerenciando`);
+    }
+}
+
+class desenvolvedor extends funcionario{
+    constructor(nome, idade, cargo, linguagem){
+        super(nome, idade, cargo);
+        this.linguagem = linguagem
+    }
+    programar(){
+        console.log(`Eu ${this.nome} estou Programando`)
+    }
+}
+
+function compararIdade(idade) {
+    if(idade<1){
+        throw new Error("Sua idade deve ser maior que 0")
+    }else if(typeof(idade) != "number"){
+        throw new Error("Utilize apenas numeros para declarar sua idade")
+    }
+
+}
+
+document.getElementById("botao").addEventListener('click', function(){
+    try{
+        let cargo = document.getElementById("selecao").value;
+        let nome = document.getElementById("nome").value;
+        let idade = document.getElementById("idade").value;
+        let departamento = document.getElementById("dep").value;
+        let lang = document.getElementById("lang").value;
+
+        if(cargo.trim() == ""||nome.trim() == ""||idade.trim() == ""||departamento.trim() == ""||lang.trim() == ""){
+            throw new Error("insira seus dados corretamente")
+        }
+        idade= parseInt(idade);
+        compararIdade(idade);
+
+        if(cargo == "Gerente"){
+            var novoGerente = new gerente(nome,parseInt(idade), cargo,departamento);
+            console.log(novoGerente)
+            novoGerente.seApresentar();
+        }else{
+            var novoDev = new desenvolvedor(nome,parseInt(idade),cargo,lang)
+            console.log(novoDev)
+            novoDev.seApresentar();
+        }
+        
+        
+    }catch(erro){
+        alert("erro de"+ erro)
+    }
+
+    event.preventDefault();
+})
+
+
+    </script>
 </body>
 </html>
