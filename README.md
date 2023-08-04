@@ -7,3 +7,5 @@
 # npm install readline-sync
 
 # npm install readline-sync --save
+
+04/08 - Creating promisses, callbacks and async functions
