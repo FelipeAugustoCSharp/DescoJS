@@ -59,4 +59,4 @@ const fb = new Promise((resolve) => {
 
 Promise.all([yt, fb]).then(result => {
     console.log(result)
-})
+})//
